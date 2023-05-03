@@ -15,12 +15,12 @@ app.get('/allchief', (req, res) => {
     res.send(allChief)
 })
 
-// app.get('/allchief/:id', (req, res) => {
-//     const id = req.params.id;
-//     console.log(id);
-//     const selectedChief = allChief.find(chief => chief.id === id)
-//     res.send(selectedChief)
-// })
+app.get('/allchief/:id', (req, res) => {
+    const id = req.params.id;
+    console.log(id);
+    const selectedChief = allChief.find(chief => chief.id === id)
+    res.send(selectedChief)
+})
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
